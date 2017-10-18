@@ -1,0 +1,28 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+	<script src="~/Scripts/angular.js"></script>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <div ng-app="myApp" ng-controller="myCtrl">
+		<p>List users</p>
+		<ul>
+			<li>1</li>
+			<li>2</li>
+			<li ng-repeat="user in users">
+				{{user.email}}   <span style="color: red" ng-click="deleteUser(user.userName)">X</span>
+			</li>
+		</ul>
+    </div>
+
+	<script src="~/Scripts/myScript/myScript.js"></script>
+</body>
+</html>
